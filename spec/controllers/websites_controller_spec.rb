@@ -68,7 +68,6 @@ RSpec.describe WebsitesController, :type => :controller do
 
       it "redirects to the created website" do
         post :create, {:website => valid_attributes}, valid_session
-        expect(response).to have_http_status(:created) 
         expect(response).to be_a_created_for(Website.last) 
       end
     end
